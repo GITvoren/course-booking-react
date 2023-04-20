@@ -1,0 +1,47 @@
+.wave-banner{
+     min-height: 90vh;
+     width: 100%;
+     background: rgb(77, 187, 187);
+     position: relative;
+}
+
+svg{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+}
+
+
+.banner-img{
+     height: 325px;
+     width: 325px;
+}
+
+.banner-txt{
+     text-align: center;
+     max-width: 700px;
+     color: whitesmoke;
+     
+}
+
+.brand-name{
+     font-family: 'Carter One', cursive;
+     font-size: 48px;
+     text-align: center;
+     color: #9560ffc5;
+}
+
+
+.banner-btn{
+     z-index: 12;
+}
+
+.banner-one{
+     font-family: 'Bree Serif', serif;
+}
+
+.banner-sub{
+     font-family: 'DM Sans', sans-serif;
+     font-weight: 400;
+     font-size: 28px;
+}

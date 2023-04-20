@@ -1,0 +1,35 @@
+nav{
+     font-family: 'DM Sans', sans-serif;
+}
+
+.custom-bg{
+     background-color: rgb(77, 187, 187)!important;
+     height: 80px;
+	background: transparent;
+	backdrop-filter: blur(15px);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	border-bottom: 0.5px solid rgba(204, 204, 204, 0.11);
+	color: whitesmoke;
+	font-size: 20px;
+};
+
+
+.nav-list li{
+     list-style-type: none!important;
+     margin-bottom: 0rem!important;
+}
+
+.nav-list{
+     list-style: none!important;
+     margin-bottom: 0rem!important;
+     color: rgb(240, 240, 240);
+}
+
+.outline-none{
+     color: white!important;
+}
+
+.img-fix{
+     height: 35px;
+     width: 125px;
+}
