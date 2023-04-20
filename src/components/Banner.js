@@ -22,8 +22,8 @@ function Banner(){
                               <div className="banner-txt">
                                    <h1 className="text-light banner-one">Want to Become a Web Developer?</h1><br />
                                
-                                   <h2 className="banner-sub">We Offer Online Coding Courses!</h2>
-                                   <h2 className="banner-sub"> Learn at your own pace!</h2> 
+                                   <h3 className="banner-sub">We Offer Online Coding Courses!</h3>
+                                   <h3 className="banner-sub"> Learn at your own pace!</h3> 
                                
                                   
                               </div>

@@ -1,16 +1,16 @@
 nav{
-     font-family: 'DM Sans', sans-serif;
+     font-family: 'Viga', sans-serif;
+     font-weight: 500;
 }
 
 .custom-bg{
      background-color: rgb(77, 187, 187)!important;
      height: 80px;
-	background: transparent;
+/* 	background: transparent; */
 	backdrop-filter: blur(15px);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-	border-bottom: 0.5px solid rgba(204, 204, 204, 0.11);
+	box-shadow: 0 0 5px rgba(99, 99, 99, 0.25);
 	color: whitesmoke;
-	font-size: 20px;
+	font-size: 18px;
 };
 
 
