@@ -1,0 +1,13 @@
+.courses-banner{
+     max-width: 900px;
+     box-shadow: 0 0 5px #a172ff9d;
+     padding: 2rem;
+     border-radius: 10px;
+   /*   background-color: #9560ffc5; */
+     color: #a172ff9d;
+     font-family: 'Viga', sans-serif;
+     gap: 5rem;
+     font-weight: bold;
+     -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #9560ffc5;
+}

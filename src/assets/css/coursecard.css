@@ -1,0 +1,17 @@
+.card-container{
+     color: rgb(70, 70, 70);
+     max-width: 700px;
+     /* border: 2px solid rgb(241, 241, 241); */
+     box-shadow: 0 0 5px gainsboro;
+     border-radius: 8px;
+     font-family: 'Viga', sans-serif;
+}
+
+.card-desc{
+     font-family: 'DM Sans', sans-serif;
+}
+
+.card-price{
+     font-family: serif;
+     font-size: 17px;
+}

@@ -2,6 +2,7 @@ import banner from '../assets/css/banner.css';
 import Container from 'react-bootstrap/Container';
 import undraw from '../assets/images/undraw.png';
 import Button from 'react-bootstrap/Button';
+import {Link} from 'react-router-dom';
 
 
 function Banner(){
@@ -15,14 +16,14 @@ function Banner(){
                     <div className="d-flex flex-lg-row flex-column-reverse gap-lg-5 gap-2 justify-content-center pt-5 align-items-center">
                          <div className="d-flex flex-column align-items-center gap-5">
                               <img src={undraw} alt="bannerimg" className="img-fluid col-lg-9 col-xxl-10 col-md-8 banner-img" />
-                              <Button variant="outline-light btn-lg" className="banner-btn">Start Learning</Button>{' '}
+                              <Link to="/courses"><Button variant="outline-light btn-lg" className="banner-btn">Start Learning</Button>{' '}</Link>
                          </div>
                          <div>
                               <div className="banner-txt">
                                    <h1 className="text-light banner-one">Want to Become a Web Developer?</h1><br />
                                
                                    <h3 className="banner-sub">We Offer Online Coding Courses!</h3>
-                                   <h3 className="banner-sub"> Learn at your own pace!</h3> 
+                                   <h3 className="banner-sub"> You can learn even at home!</h3> 
                                
                                   
                               </div>
