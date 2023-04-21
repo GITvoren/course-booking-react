@@ -15,7 +15,7 @@ function AppNavbar() {
             <li>Contact</li>
         </ul>
         <div>
-          <Button variant="outline-light btn-lg">Member</Button>{' '}
+          <Button variant="outline-light btn-lg" className="custom-bg3">Member</Button>{' '}
         </div>
       </nav>
   );

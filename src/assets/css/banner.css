@@ -34,6 +34,17 @@ svg{
 
 .banner-btn{
      z-index: 12;
+     background-color: #9560ffc5!important;
+     color: whitesmoke;
+     border: 0;
+     font-family: 'DM Sans', sans-serif;
+     font-weight: 500;
+}
+
+.banner-btn:hover{
+
+     color: #9560ffc5!important;
+     background-color: rgba(245, 245, 245, 0.747)!important;
 }
 
 .banner-one{

@@ -33,3 +33,18 @@ nav{
      height: 35px;
      width: 125px;
 }
+
+.custom-bg2{
+     background-color: #9560ffc5!important;
+}
+
+.custom-bg3{
+     border: 0;
+     color: whitesmoke;
+     background-color: #9560ffc5!important;
+}
+
+.custom-bg3:hover{
+     background-color: rgba(245, 245, 245, 0.747)!important;
+     color: #9560ffc5!important;  
+}
