@@ -27,7 +27,7 @@ function Banner(){
                                
                                   
                               </div>
-                              <h1 className="brand-name mt-5">Code Lab.</h1>
+                              <h1 className="brand-name mt-5">Code <span className="text-light">Lab</span> <span>.</span></h1>
                          </div>
                     </div>
                </Container>
