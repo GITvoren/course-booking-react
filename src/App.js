@@ -1,4 +1,5 @@
 import AppNavbar from './components/AppNavbar.js'
+import CourseView from './components/CourseView.js'
 import Home from './pages/Home.js'
 import { Routes, Route } from 'react-router-dom'
 import Login from './pages/Login.js'
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element= {<Home />}/>
           <Route path="/courses" element= {<Courses />}/>
+          <Route path="/courseview" element= {<CourseView />}/>
           <Route path="/about" element= {<UnderConstruction />}/>
           <Route path="/contact" element= {<UnderConstruction />}/>
           <Route exact path="/account">
