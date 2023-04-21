@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 function Register(){
      return(
           <Container>
-               <Form className="account-container mx-auto mt-5 pt-5">
+               <Form className="account-container mx-auto mt-4 pt-4">
                     <div className="d-flex flex-column gap-1">
                          <h1 className="align-self-center h2 account-head mb-5">Member Registration</h1>
                          <Form.Group>
