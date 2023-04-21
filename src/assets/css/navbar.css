@@ -30,8 +30,8 @@ nav{
 }
 
 .img-fix{
-     height: 27px;
-     width: 125px;
+     height: 32px;
+     width: 150px;
 }
 
 .custom-bg2{
@@ -47,4 +47,12 @@ nav{
 .custom-bg3:hover{
      background-color: rgba(245, 245, 245, 0.747)!important;
      color: #9560ffc5!important;  
+}
+
+.fa-user{
+     color: #9560ffc5!important;
+}
+
+.fa-bars{
+     color: rgba(250, 250, 250, 0.9);
 }

@@ -13,9 +13,9 @@ function Banner(){
                     </path>
                </svg>
                <Container>
-                    <div className="d-flex flex-lg-row flex-column gap-5 justify-content-center mt-5 align-items-center">
+                    <div className="d-flex flex-lg-row flex-column-reverse gap-lg-5 gap-2 justify-content-center mt-5 align-items-center">
                          <div className="d-flex flex-column align-items-center gap-4">
-                              <img src={undraw} alt="bannerimg" className="img-fluid banner-img" />
+                              <img src={undraw} alt="bannerimg" className="img-fluid col-lg-9 col-xxl-10 col-md-8 banner-img" />
                               <Button variant="outline-light btn-lg" className="banner-btn">Start Learning</Button>{' '}
                          </div>
                          <div>
@@ -27,7 +27,7 @@ function Banner(){
                                
                                   
                               </div>
-                              <h1 className="brand-name mt-5">Code <span className="text-light">Lab</span> <span>.</span></h1>
+                              <h1 className="brand-name mt-5">&lt;Code <span className="text-light">Lab </span>/&gt;</h1>
                          </div>
                     </div>
                </Container>

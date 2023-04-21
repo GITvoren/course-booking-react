@@ -55,3 +55,78 @@ svg{
      font-family: 'DM Sans', sans-serif;
      font-weight: 400;
 }
+
+@media(max-width:462px){
+     .brand-name{
+          display: none;
+     }
+     
+     h1{
+          font-size: 24px;
+     }
+
+     h3{
+          font-size: 18px;
+     }
+
+     .banner-img{
+          height: 150px!important;
+          width: 150px!important;
+     }
+
+     .banner-btn{
+          padding: 10px;
+          font-size: 18px;
+     }
+}
+
+@media(max-width:991px){
+     .brand-name{
+          display: none;
+     }
+
+     .banner-img{
+          height: 200px;
+          width: 200px;
+     }
+
+     .nav-list{
+          flex-direction: column;
+          gap: 1rem!important;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 85%;
+          text-align: center;
+          background-color: #9f6fffee!important;
+          width: 100%;
+          padding: 2rem;
+          color: rgba(245, 245, 245, 0.9);
+          border: 1px solid rgba(245, 245, 245, 0.562);
+          border-radius: 8px;
+    
+     }
+
+     .member-btn{
+          display: none;
+     }
+
+     .fa-bars{
+          display: block!important;
+     }
+
+     .fa-user{
+          display: block!important;
+     }
+
+     
+
+}
+
+.fa-bars{
+     display: none;
+}
+
+.fa-user{
+     display: none;
+}
