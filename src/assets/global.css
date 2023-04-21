@@ -29,3 +29,23 @@ html{
   color: #a273ffd0!important;
   transition: 0.15s all ease-in-out;
 }
+
+::placeholder{
+  font-size: 13px;
+  font-family: serif;
+  color: gainsboro!important;
+}
+
+:root input:focus{
+  outline: none;
+  border: 0.5px;
+  border-color: #b28bff81;
+  box-shadow: 0 0 5px #b28bff81;
+  -moz-box-shadow: 0 0 5px #b28bff81;
+  -webkit-box-shadow: 0 0 5px #b28bff81;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}

@@ -1,0 +1,28 @@
+.account-container{
+     max-width: 400px;
+     font-family: 'DM Sans', sans-serif;
+}
+
+.reg-btn{
+     font-size: 16px;
+     font-weight: 500;
+     text-decoration: underline;
+     text-underline-offset: 5px;
+     color: #9560ffc5!important;
+     font-family: 'Viga', sans-serif;
+}
+
+.reg-btn:hover{
+
+     color: #a071ff9a!important;
+}
+
+.reg-txt{
+     padding-top: 1rem;
+    font-size: 15px;
+    
+}
+
+.account-head{
+     font-family: 'Bree Serif', serif;
+}
