@@ -18,3 +18,14 @@
 html{
   scroll-behavior: smooth;
 }
+
+
+.router-links{
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.router-links:hover{
+  color: #a273ffd0!important;
+  transition: 0.15s all ease-in-out;
+}

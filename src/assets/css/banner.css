@@ -2,20 +2,19 @@
      min-height: 90vh;
      width: 100%;
      background: rgb(77, 187, 187);
-     position: relative;
+     z-index: -1;
+
 }
+
 
 svg{
      position: absolute;
      bottom: 0;
      left: 0;
+   
 }
 
 
-.banner-img{
-     height: 325px;
-     width: 325px;
-}
 
 .banner-txt{
      text-align: center;
@@ -33,12 +32,12 @@ svg{
 
 
 .banner-btn{
-     z-index: 12;
      background-color: #9560ffc5!important;
      color: whitesmoke;
      border: 0;
      font-family: 'DM Sans', sans-serif;
      font-weight: 500;
+     position: relative;
 }
 
 .banner-btn:hover{
@@ -96,7 +95,7 @@ svg{
           position: absolute;
           left: 0;
           right: 0;
-          top: 85%;
+          top: -400%;
           text-align: center;
           background-color: #9f6fffee!important;
           width: 100%;
@@ -104,6 +103,8 @@ svg{
           color: rgba(245, 245, 245, 0.9);
           border: 1px solid rgba(245, 245, 245, 0.562);
           border-radius: 8px;
+          transition: 0.25s;
+          z-index: 99 !important;
     
      }
 

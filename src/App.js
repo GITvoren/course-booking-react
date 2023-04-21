@@ -1,10 +1,11 @@
 import AppNavbar from './components/AppNavbar.js'
-import Banner from './components/Banner.js'
+import Home from './pages/Home.js'
 
 function App() {
   return (
     <div>
-      <Banner />
+      <AppNavbar />
+      <Home />
     </div>
   );
 }
