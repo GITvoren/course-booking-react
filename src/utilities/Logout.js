@@ -16,7 +16,7 @@ function Logout(){
      Swal.fire({
           title: 'Logged out Successfully',
           icon: 'success',
-          text: 'See you later!'
+          text: 'See you again next time!'
      })
 
      return (

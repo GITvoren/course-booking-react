@@ -8,6 +8,7 @@ import Courses from './pages/Courses.js'
 import Register from './pages/Register.js'
 import UnderConstruction from './utilities/UnderConstruction.js'
 import { UserProvider } from "./utilities/UserContext.js";
+import NonMemberRoutes from "./utilities/NonMemberRoutes.js";
 import Logout from "./utilities/Logout.js";
 
 function App() {
@@ -55,10 +56,10 @@ useEffect(()=>{
         <Routes>
           <Route exact path="/" element= {<Home />}/>
           <Route path="/courses" element= {<Courses />}/>
-          <Route path="/courseview" element= {<CourseView />}/>
+          <Route path="/:courseId/details" element= {<CourseView />}/>
           <Route path="/about" element= {<UnderConstruction />}/>
           <Route path="/contact" element= {<UnderConstruction />}/>
-          <Route exact path="/account">
+          <Route element={<NonMemberRoutes />}>
               <Route path="/account/login" element={<Login />} />
               <Route path="/account/register" element={<Register />} />
           </Route>
