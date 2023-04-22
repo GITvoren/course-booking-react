@@ -13,6 +13,7 @@ function CourseView(){
      const {courseId}= useParams();
      const [name, setName] = useState("")
      const [description, setDescription] = useState("");
+     const [schedule, setSchedule] = useState("");
      const [price, setPrice] = useState(0);
      const [enrollees, setEnrollees] = useState(0);
 
@@ -55,19 +56,23 @@ function CourseView(){
                setName(data.name);
                setDescription(data.description);
                setPrice(data.price);
+               setSchedule(data.schedule);
                setEnrollees(data.enrollees.length)
           })
        }, [courseId])
      
 
      return(
+          <>
+               <span onClick={(e) => {e.preventDefault(); navigate(-1);}} className="back-btn text-custom">Back</span>
                <div className="card-container d-flex flex-column p-5 mx-auto my-4">
                     <h3>{name}</h3>
                     <p className="card-desc">{description}</p>
                     <h6>Price:</h6>
                     <p className="card-price">&#8369;{price}</p>
                     <h6>Class Schedule:</h6>
-                    <p className="card-price">8:00 AM - 5:00 PM</p>
+                    <p className="card-price">{schedule}</p>
+                   
 
                     {
 					        	(user.id !== null) ?
@@ -75,14 +80,17 @@ function CourseView(){
                                         <h6>Current Number of Enrollees:</h6>
                                         <p className="card-price">{enrollees}</p>
                                        <Button onClick={enroll} variant="outline-light" className="custom-bg4 align-self-center mt-3">Enroll</Button>
+                                       
                                         </>
 					        		
 					        		
 					        		:
 					        		<Link className="router-links align-self-center mt-3" to="/account/login"><Button variant="outline-light" className="custom-bg4 align-self-center">Login to Enroll</Button></Link>
 				}
-                    
+                
                </div>
+
+          </>
      )
 }
 

@@ -15,3 +15,33 @@
      font-family: serif;
      font-size: 17px;
 }
+
+
+
+.back-btn{
+     display: block;
+     text-align: center!important;
+     margin-right: 55rem;
+     margin-top: 2rem;
+     padding: 5px;
+}
+
+
+.text-custom{
+     color: #9a67ffdc;
+     font-weight: bold;
+     cursor: pointer;
+}
+
+.text-custom:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+@media(max-width: 500px){
+     .back-btn{
+
+          margin-right: 0!important;
+
+     }
+}
