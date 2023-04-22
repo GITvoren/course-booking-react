@@ -26,3 +26,16 @@
 .account-head{
      font-family: 'Bree Serif', serif;
 }
+
+.disabled-btn{
+     cursor: not-allowed!important;
+     
+}
+
+.disabled-btn:hover{
+     color: #9560ffc5!important;
+     border: 2px solid #9560ffc5!important;
+     background-color: white!important;
+
+}
+

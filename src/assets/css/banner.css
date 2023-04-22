@@ -120,6 +120,11 @@ svg{
           display: block!important;
      }
 
+     .fa-sign-out{
+          display: block!important;
+     }
+ 
+
      
 
 }
@@ -129,5 +134,8 @@ svg{
 }
 
 .fa-user{
+     display: none;
+}
+.fa-sign-out{
      display: none;
 }
