@@ -1,4 +1,4 @@
-# Ecommerce React App
+# Course Booking React App
 
 This project is an Course Booking website app built using the MERN stack. (MongoDB, ExpressJS, React, NodeJS)
 ###### Note** This repository is its frontend. The repository link to its backend API is [here](https://github.com/GITvoren/course-booking-api).
