@@ -10,7 +10,7 @@ This project is an Course Booking website app built using the MERN stack. (Mongo
 
 
 
-## Features:
+## Features
 - Register user to the database
 - Authenticate user login
 - View all active courses
@@ -32,5 +32,7 @@ This project is an Course Booking website app built using the MERN stack. (Mongo
 - [Figma](https://figma.com/)
 - [Vercel](https://vercel.com/)
 
+## Feedback
+If you encounter any error or bugs, or has a suggestion, dont hesitate to contact me. Thank you very much!
 
 
