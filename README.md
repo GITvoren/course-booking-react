@@ -32,6 +32,7 @@ This project is a Course Booking website app built using the MERN stack. (MongoD
 - [Figma](https://figma.com/)
 - [Canva](https://www.canva.com/en_ph/)
 - [unDraw](https://undraw.co/search)
+- [Get Waves](https://getwaves.io/)
 - [Vercel](https://vercel.com/)
 
 ## Feedback
