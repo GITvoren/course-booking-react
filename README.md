@@ -36,6 +36,6 @@ This project is a Course Booking website app built using the MERN stack. (MongoD
 - [Vercel](https://vercel.com/)
 
 ## Feedback
-If you encounter any errors or bugs, have a suggestion, or if you have any questions, please do not hesitate to contact me. Thank you very much!
+If you encounter any errors or bugs, have a suggestion, or if you have any questions, please do not hesitate to contact me. Thank you!
 
 
