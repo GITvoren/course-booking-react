@@ -1,7 +1,6 @@
 # Course Booking React App
 
 This project is a Course Booking website app built using the MERN stack. (MongoDB, ExpressJS, React, NodeJS)
-###### Note** <br/> This repository is just its frontend. The repository link to its backend API is [here](https://github.com/GITvoren/course-booking-api).
 
 #### [Live Demo](https://codelab-react.vercel.app/):point_left: (hosted on [Vercel](https://vercel.com/))
 
