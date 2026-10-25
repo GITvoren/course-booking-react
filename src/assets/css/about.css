@@ -1,0 +1,115 @@
+/* Minimal About page — uses the shared CodeLab theme */
+.codelab-about-page {
+  min-height: 65vh;
+  padding: clamp(3rem, 8vw, 6rem) 1.25rem;
+  color: var(--text-primary, #f4f8fc);
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(0, 185, 241, 0.07), transparent 34%),
+    var(--background, #00152A);
+}
+
+.codelab-about-content {
+  width: min(850px, 100%);
+  margin: 0 auto;
+}
+
+.codelab-page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--primary, #00B9F1);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.codelab-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary, #00B9F1);
+}
+
+.codelab-about-content > h1 {
+  max-width: 760px;
+  margin: 1.1rem 0 1.25rem;
+  color: var(--text-primary, #f4f8fc);
+  font-size: clamp(2.35rem, 6vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.codelab-about-content > h1 span {
+  color: var(--primary, #00B9F1);
+}
+
+.codelab-about-intro {
+  max-width: 690px;
+  margin: 0;
+  color: var(--text-secondary, #a8b8c9);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.85;
+}
+
+.codelab-about-rule {
+  height: 1px;
+  margin: 2.4rem 0;
+  background: var(--border-color, rgba(168, 184, 201, 0.17));
+}
+
+.codelab-about-details {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.codelab-about-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.codelab-about-number {
+  padding-top: 0.15rem;
+  color: var(--primary, #00B9F1);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.codelab-about-item h2 {
+  margin: 0 0 0.35rem;
+  color: var(--text-primary, #f4f8fc);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.codelab-about-item p {
+  max-width: 600px;
+  margin: 0;
+  color: var(--text-secondary, #a8b8c9);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.codelab-about-note {
+  margin: 2.5rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--primary, #00B9F1);
+  color: var(--text-muted, #8095aa);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 520px) {
+  .codelab-about-page {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .codelab-about-item {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+}

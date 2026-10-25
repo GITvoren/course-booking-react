@@ -1,41 +1,189 @@
-.account-container{
-     max-width: 400px;
-     font-family: 'DM Sans', sans-serif;
+/* Minimal CodeLab registration page */
+.codelab-auth-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  color: var(--text-primary, #f4f8fc);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(0, 185, 241, 0.08), transparent 42%),
+    var(--background, #00152A);
 }
 
-.reg-btn{
-     font-size: 16px;
-     font-weight: 500;
-     text-decoration: underline;
-     text-underline-offset: 5px;
-     color: #9560ffc5!important;
-     font-family: 'Viga', sans-serif;
+.codelab-auth-card {
+  width: min(100%, 620px);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--border-color, rgba(168, 184, 201, 0.17));
+  border-radius: 16px;
+  background: var(--surface, #031D36);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
 }
 
-.reg-btn:hover{
-
-     color: #a071ff9a!important;
+.codelab-auth-heading {
+  margin-bottom: 1.8rem;
 }
 
-.reg-txt{
-     padding-top: 1rem;
-    font-size: 15px;
-    
+.codelab-auth-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--primary, #00B9F1);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
 }
 
-.account-head{
-     font-family: 'Bree Serif', serif;
+.codelab-auth-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary, #00B9F1);
 }
 
-.disabled-btn{
-     cursor: not-allowed!important;
-     
+.codelab-auth-heading h1 {
+  margin: 0.9rem 0 0.6rem;
+  color: var(--text-primary, #f4f8fc);
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.12;
 }
 
-.disabled-btn:hover{
-     color: #9560ffc5!important;
-     border: 2px solid #9560ffc5!important;
-     background-color: white!important;
-
+.codelab-auth-heading h1 span {
+  color: var(--primary, #00B9F1);
 }
 
+.codelab-auth-heading p {
+  margin: 0;
+  color: var(--text-secondary, #a8b8c9);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.codelab-auth-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.codelab-auth-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.codelab-auth-field {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.codelab-auth-field label {
+  color: var(--text-primary, #f4f8fc);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.codelab-auth-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.78rem 0.85rem;
+  border: 1px solid var(--border-color, rgba(168, 184, 201, 0.2));
+  border-radius: 9px;
+  outline: none;
+  background: var(--background, #00152A);
+  color: var(--text-primary, #f4f8fc);
+  font: inherit;
+  font-size: 0.9rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.codelab-auth-field input::placeholder {
+  color: var(--text-muted, #8095aa);
+  opacity: 1;
+}
+
+.codelab-auth-field input:focus {
+  border-color: var(--primary, #00B9F1);
+  box-shadow: 0 0 0 3px rgba(0, 185, 241, 0.1);
+}
+
+.codelab-auth-field input:focus-visible {
+  outline: none;
+}
+
+.codelab-auth-field small {
+  color: var(--text-muted, #8095aa);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.codelab-auth-validation {
+  margin: -0.25rem 0 0;
+  color: #ffb4b4;
+  font-size: 0.8rem;
+}
+
+.codelab-auth-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 0.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--primary, #00B9F1);
+  border-radius: 9px;
+  background: var(--primary, #00B9F1);
+  color: #00152A;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.codelab-auth-submit:hover:not(:disabled) {
+  background: #35cafa;
+  transform: translateY(-1px);
+}
+
+.codelab-auth-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.codelab-auth-submit:focus-visible {
+  outline: 2px solid var(--text-primary, #f4f8fc);
+  outline-offset: 3px;
+}
+
+.codelab-auth-switch {
+  margin: 1.5rem 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-color, rgba(168, 184, 201, 0.17));
+  color: var(--text-secondary, #a8b8c9);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.codelab-auth-switch a {
+  color: var(--primary, #00B9F1);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.codelab-auth-switch a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .codelab-auth-fields-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .codelab-auth-card {
+    border-radius: 12px;
+  }
+}

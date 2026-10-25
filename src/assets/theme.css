@@ -1,0 +1,179 @@
+
+:root {
+  /* Brand Colors */
+  --color-primary: #00B9F1;
+  --color-primary-hover: #19C8FF;
+  --color-primary-active: #009DD8;
+  --color-secondary: #0875C9;
+  --color-secondary-deep: #064A88;
+  --color-accent: #00D9FF;
+  --color-accent-blue: #0879D1;
+  --color-accent-glow: #00BFFF;
+
+  /* Background Colors */
+  --color-background: #00152A;
+  --color-background-elevated: #031B33;
+  --color-background-deep: #001226;
+  --color-background-blue: #032344;
+  --color-background-overlay: #00172B;
+  --color-background-code: #00182D;
+
+  /* Surface Colors */
+  --color-surface: #031D36;
+  --color-surface-elevated: #062541;
+  --color-surface-hover: #08304F;
+  --color-surface-active: #0A3C60;
+  --color-surface-muted: #08223A;
+  --color-surface-input: #061F38;
+
+  /* Text Colors */
+  --color-text-primary: #F2F7FF;
+  --color-text-secondary: #C1D7EC;
+  --color-text-muted: #83A9C9;
+  --color-text-subtle: #5E88AB;
+  --color-text-disabled: #42627D;
+  --color-text-inverse: #00152A;
+  --color-text-link: #16C7FF;
+
+  /* Border Colors */
+  --color-border: #075080;
+  --color-border-subtle: #073756;
+  --color-border-strong: #0875B8;
+  --color-border-focus: #00B9F1;
+  --color-border-interactive: #0874B9;
+
+  /* Gradient Colors */
+  --color-gradient-start: #06447F;
+  --color-gradient-mid: #075CB0;
+  --color-gradient-end: #043A73;
+  --color-gradient-highlight: #087BD0;
+
+  /* Status and Feedback Colors */
+  --color-success: #00CFA3;
+  --color-info: #00B9F1;
+  --color-warning: #FFC857;
+  --color-error: #FF647C;
+  --color-rating: #00C8FF;
+  --color-disabled: #42627D;
+
+  /* Typography */
+  --font-family-primary: Inter, Arial, sans-serif;
+  --font-family-display: Inter, Arial, sans-serif;
+  --font-family-mono: "JetBrains Mono", Consolas, monospace;
+
+  --font-size-display: 38px;
+  --font-size-heading-xl: 32px;
+  --font-size-heading-lg: 28px;
+  --font-size-heading-md: 21px;
+  --font-size-heading-sm: 16px;
+  --font-size-body-lg: 16px;
+  --font-size-body: 14px;
+  --font-size-body-sm: 12px;
+  --font-size-navigation: 13px;
+  --font-size-label: 11px;
+  --font-size-badge: 10px;
+  --font-size-metadata: 11px;
+  --font-size-metric: 20px;
+  --font-size-button: 13px;
+  --font-size-code: 11px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-display: 1.12;
+  --line-height-heading: 1.2;
+  --line-height-subheading: 1.3;
+  --line-height-body: 1.5;
+  --line-height-compact: 1.4;
+  --line-height-label: 1.5;
+  --line-height-code: 1.5;
+
+  --letter-spacing-display: -0.6px;
+  --letter-spacing-heading: -0.4px;
+  --letter-spacing-body: 0.1px;
+  --letter-spacing-navigation: 0.1px;
+  --letter-spacing-label: 1.7px;
+  --letter-spacing-metadata: 0.2px;
+  --letter-spacing-code: 0;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* Border Thickness */
+  --border-width-thin: 1px;
+  --border-width-default: 1px;
+  --border-width-strong: 1.5px;
+
+  /* Shadows and Elevation */
+  --shadow-none: none;
+  --shadow-subtle: 0 2px 8px rgba(0, 10, 25, 0.16);
+  --shadow-card: 0 4px 14px rgba(0, 8, 22, 0.22);
+  --shadow-floating: 0 8px 24px rgba(0, 8, 22, 0.32);
+  --shadow-modal: 0 16px 48px rgba(0, 5, 18, 0.48);
+  --shadow-glow: 0 0 12px rgba(0, 185, 241, 0.16);
+  --shadow-focus: 0 0 0 3px rgba(0, 185, 241, 0.16);
+
+  /* Spacing Scale */
+  --spacing-2xs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 48px;
+  --spacing-6xl: 64px;
+
+  /* Component Padding */
+  --padding-control-x: 16px;
+  --padding-control-y: 12px;
+  --padding-button-x: 16px;
+  --padding-button-y: 12px;
+  --padding-badge-x: 8px;
+  --padding-badge-y: 4px;
+  --padding-card: 16px;
+  --padding-card-comfortable: 20px;
+  --padding-panel: 24px;
+  --padding-banner-x: 32px;
+  --padding-banner-y: 24px;
+
+  /* Interaction */
+  --transition-fast: 150ms ease-out;
+  --transition-normal: 200ms ease-out;
+  --transition-slow: 220ms ease-out;
+
+  --opacity-disabled: 0.5;
+  --opacity-muted: 0.72;
+  --opacity-overlay: 0.78;
+
+  /* Focus and Accessibility */
+  --focus-outline-width: 2px;
+  --focus-outline-offset: 2px;
+  --focus-outline-color: #00B9F1;
+
+  /* Iconography */
+  --icon-size-sm: 14px;
+  --icon-size-md: 18px;
+  --icon-size-lg: 24px;
+  --icon-stroke-width: 1.75px;
+
+  /* Layering */
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-overlay: 300;
+  --z-index-modal: 400;
+  --z-index-tooltip: 500;
+}

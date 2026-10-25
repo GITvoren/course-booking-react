@@ -1,6 +1,6 @@
 # Course Booking React App
 
-This project is a Course Booking website app built using the MERN stack. (MongoDB, ExpressJS, React, NodeJS)
+This project is a Course Booking website app built with goal to practice MERN stack, explore authentication and API routing, and learn how React, Express.js, and MongoDB work together in a full-stack application.
 
 #### [Live Demo](https://codelab-react.vercel.app/):point_left: (hosted on [Vercel](https://vercel.com/))
 

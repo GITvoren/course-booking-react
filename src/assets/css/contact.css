@@ -1,0 +1,203 @@
+/* Minimal Contact page — uses the shared CodeLab theme */
+.codelab-contact-page {
+  min-height: 65vh;
+  padding: clamp(3rem, 7vw, 5.5rem) 1.25rem;
+  color: var(--text-primary, #f4f8fc);
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(0, 185, 241, 0.07), transparent 34%),
+    var(--background, #00152A);
+}
+
+.codelab-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
+  gap: clamp(2rem, 7vw, 6rem);
+  align-items: start;
+  width: min(1000px, 100%);
+  margin: 0 auto;
+}
+
+.codelab-page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--primary, #00B9F1);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.codelab-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary, #00B9F1);
+}
+
+.codelab-contact-copy h1 {
+  margin: 1.1rem 0 1.1rem;
+  color: var(--text-primary, #f4f8fc);
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+
+.codelab-contact-copy h1 span {
+  color: var(--primary, #00B9F1);
+}
+
+.codelab-contact-intro {
+  max-width: 410px;
+  margin: 0;
+  color: var(--text-secondary, #a8b8c9);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.codelab-contact-small-note {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 2.2rem;
+}
+
+.codelab-contact-symbol {
+  display: grid;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(0, 185, 241, 0.25);
+  border-radius: 12px;
+  background: rgba(0, 185, 241, 0.07);
+  color: var(--primary, #00B9F1);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.codelab-contact-small-note p {
+  margin: 0;
+  color: var(--text-muted, #8095aa);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.codelab-contact-form-card {
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border: 1px solid var(--border-color, rgba(168, 184, 201, 0.17));
+  border-radius: 16px;
+  background: var(--surface, #031D36);
+}
+
+.codelab-contact-form-card h2 {
+  margin: 0;
+  color: var(--text-primary, #f4f8fc);
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.codelab-contact-form-subtitle {
+  margin: 0.5rem 0 1.5rem;
+  color: var(--text-secondary, #a8b8c9);
+  font-size: 0.9rem;
+}
+
+.codelab-contact-form-card form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.codelab-form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.codelab-form-field label {
+  color: var(--text-primary, #f4f8fc);
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.codelab-form-field input,
+.codelab-form-field textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--border-color, rgba(168, 184, 201, 0.2));
+  border-radius: 9px;
+  outline: none;
+  background: var(--background, #00152A);
+  color: var(--text-primary, #f4f8fc);
+  font: inherit;
+  font-size: 0.92rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.codelab-form-field input::placeholder,
+.codelab-form-field textarea::placeholder {
+  color: var(--text-muted, #8095aa);
+  opacity: 1;
+}
+
+.codelab-form-field input:focus,
+.codelab-form-field textarea:focus {
+  border-color: var(--primary, #00B9F1);
+  box-shadow: 0 0 0 3px rgba(0, 185, 241, 0.1);
+}
+
+.codelab-form-field textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+.codelab-contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 46px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--primary, #00B9F1);
+  border-radius: 9px;
+  background: var(--primary, #00B9F1);
+  color: #00152A;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.codelab-contact-submit:hover {
+  background: #35cafa;
+  transform: translateY(-1px);
+}
+
+.codelab-contact-submit:focus-visible {
+  outline: 2px solid var(--text-primary, #f4f8fc);
+  outline-offset: 3px;
+}
+
+.codelab-contact-form-note {
+  margin: -0.25rem 0 0;
+  color: var(--text-muted, #8095aa);
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .codelab-contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.25rem;
+  }
+
+  .codelab-contact-copy h1 {
+    font-size: clamp(2.7rem, 11vw, 4rem);
+  }
+
+  .codelab-contact-intro {
+    max-width: 600px;
+  }
+}

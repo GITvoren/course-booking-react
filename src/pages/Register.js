@@ -1,186 +1,229 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
-import login from '../assets/css/login.css'
-import {Link} from 'react-router-dom';
-import Swal from 'sweetalert2'
-import { useState, useEffect } from 'react';
-import { useNavigate, Navigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import '../assets/css/register.css';
 
+function Register() {
+  const [email, setEmail] = useState('');
+  const [password1, setPassword1] = useState('');
+  const [password2, setPassword2] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [mobileNumber, setMobileNumber] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
+  const isActive =
+    firstName.trim() !== '' &&
+    lastName.trim() !== '' &&
+    email.trim() !== '' &&
+    email.length >= 10 &&
+    mobileNumber.trim().length >= 11 &&
+    password1.length >= 8 &&
+    password1 === password2;
 
+  useEffect(() => {
+    // Keep validation derived from field values; no separate state needed.
+  }, []);
 
-function Register(){
+  async function registerUser(event) {
+    event.preventDefault();
+    if (!isActive || isSubmitting) return;
 
-     const [email, setEmail] = useState("");
-     const [password1, setPassword1] = useState("");
-     const [password2, setPassword2] = useState("");
-     const [firstName, setFirstName] = useState("");
-     const [lastName, setLastName] = useState("");
-     const [mobileNumber, setMobileNumber] = useState("");
+    setIsSubmitting(true);
+    try {
+      const checkResponse = await fetch(
+        `${process.env.REACT_APP_API_URL}/users/checkEmail`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        }
+      );
 
-     const [isActive, setIsActive] = useState(true);
-     const navigate= useNavigate()
+      const emailExists = await checkResponse.json();
 
-     useEffect(() => {
+      if (emailExists === true) {
+        await Swal.fire({
+          title: 'Registration failed',
+          icon: 'error',
+          text: 'That email address is already registered.',
+        });
+        return;
+      }
 
-          if((email !== "" && password1 !== "" && password2 !== "" && firstName !== "" && lastName !== "" && mobileNumber !== "" && ( password1 === password2) && (password1.length > 7) && (mobileNumber.length >= 11) && (email.length >= 10)))
-          {
-               setIsActive(true);
-          } else {
-               setIsActive(false);
-          }
+      const registerResponse = await fetch(
+        `${process.env.REACT_APP_API_URL}/users/register`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            password: password1,
+            mobileNo: mobileNumber,
+            firstName,
+            lastName,
+          }),
+        }
+      );
 
-     }, [email, password1, password2, firstName, lastName, mobileNumber])
+      const data = await registerResponse.json();
 
-     function registerUser(e){
-          e.preventDefault()
+      if (data === true) {
+        await Swal.fire({
+          title: 'Registration successful!',
+          icon: 'success',
+          text: 'Your account has been created. You can log in now.',
+          confirmButtonColor: '#00B9F1',
+        });
+        navigate('/account/login');
+      } else {
+        Swal.fire({
+          title: 'Registration failed',
+          icon: 'error',
+          text: 'Something went wrong. Please try again later.',
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        title: 'Unable to register',
+        icon: 'error',
+        text: 'Please check your connection and try again.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
-          fetch(`${process.env.REACT_APP_API_URL}/users/checkEmail`, {
-               method: 'POST',
-               headers: {
-                    'Content-type': 'application/json'
-               },
-               body: JSON.stringify({
-                    email:email
-               })
+  return (
+    <main className="codelab-auth-page">
+      <section className="codelab-auth-card codelab-register-card">
+        <div className="codelab-auth-heading">
+          <span className="codelab-auth-eyebrow">
+            <span className="codelab-auth-dot" />
+            JOIN CODELAB
+          </span>
+          <h1>Create your <span>account.</span></h1>
+          <p>Sign up to start learning and building new skills.</p>
+        </div>
 
-          })
-          .then(res => res.json())
-          .then(data => {
-               if(data === true){
-                    Swal.fire({
-                         title: "Registration failed!",
-                         icon: "error",
-                         text: "Email already exists!"
-                    })
-               } else {
-                    
-                    next()  
-               
-               }
-          })
-     }
+        <form onSubmit={registerUser} className="codelab-auth-form">
+          <div className="codelab-auth-fields-grid">
+            <div className="codelab-auth-field">
+              <label htmlFor="register-first-name">First name</label>
+              <input
+                id="register-first-name"
+                name="firstName"
+                type="text"
+                autoComplete="given-name"
+                value={firstName}
+                onChange={(event) => setFirstName(event.target.value)}
+                placeholder="First name"
+                required
+              />
+            </div>
 
-     function next(){
+            <div className="codelab-auth-field">
+              <label htmlFor="register-last-name">Last name</label>
+              <input
+                id="register-last-name"
+                name="lastName"
+                type="text"
+                autoComplete="family-name"
+                value={lastName}
+                onChange={(event) => setLastName(event.target.value)}
+                placeholder="Last name"
+                required
+              />
+            </div>
+          </div>
 
-                    fetch(`${process.env.REACT_APP_API_URL}/users/register`, {
-                    method: 'POST',
-                    headers: {
-                         'Content-type': 'application/json'
-                    },
-                    body: JSON.stringify({
+          <div className="codelab-auth-field">
+            <label htmlFor="register-email">Email address</label>
+            <input
+              id="register-email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              placeholder="you@example.com"
+              required
+            />
+            <small>We’ll only use your email for your account.</small>
+          </div>
 
-                         email:email,
-                         password: password1,
-                         mobileNo: mobileNumber,
-                         firstName: firstName,
-                         lastName: lastName
-                     })
-                 })
-                 .then(res => res.json())
-                 .then(data => {
-                    if(data === true){
-                         Swal.fire({
-                              title: "Registration successful!",
-                              icon: "success",
-                              text: "You have successfully registered! You can log in now"
-                         })
-                    
-                    navigate('/account/login');
+          <div className="codelab-auth-field">
+            <label htmlFor="register-mobile">Mobile number</label>
+            <input
+              id="register-mobile"
+              name="mobileNumber"
+              type="tel"
+              autoComplete="tel"
+              inputMode="tel"
+              value={mobileNumber}
+              onChange={(event) => setMobileNumber(event.target.value)}
+              placeholder="09XXXXXXXXX"
+              minLength={11}
+              required
+            />
+          </div>
 
-                    } else {
-                         Swal.fire({
-                              title: "Registration failed!",
-                              icon: "error",
-                              text: "Oh no, an error has occured. Please try again later."
-                         })
-                    }
-                 })
-                 
-          }
+          <div className="codelab-auth-fields-grid">
+            <div className="codelab-auth-field">
+              <label htmlFor="register-password">Password</label>
+              <input
+                id="register-password"
+                name="password"
+                type="password"
+                autoComplete="new-password"
+                value={password1}
+                onChange={(event) => setPassword1(event.target.value)}
+                placeholder="At least 8 characters"
+                minLength={8}
+                required
+              />
+            </div>
 
+            <div className="codelab-auth-field">
+              <label htmlFor="register-confirm-password">Confirm password</label>
+              <input
+                id="register-confirm-password"
+                name="confirmPassword"
+                type="password"
+                autoComplete="new-password"
+                value={password2}
+                onChange={(event) => setPassword2(event.target.value)}
+                placeholder="Repeat password"
+                minLength={8}
+                required
+              />
+            </div>
+          </div>
 
-     return(
-          <Container>
-               <Form className="account-container mx-auto mt-4 pt-4">
-                    <div className="d-flex flex-column gap-1">
-                         <h1 className="align-self-center h2 account-head mb-5">Member Registration</h1>
-                         <Form.Group>
-                              <Form.Label>First Name</Form.Label>
-                              <Form.Control
-                              type="text"
-                              value={firstName}
-                              onChange= {e => setFirstName(e.target.value)}
-                              required />
-                              
-                         </Form.Group>
-                         <Form.Group>
-                              <Form.Label>Last Name</Form.Label>
-                              <Form.Control
-                              type="text"
-                              value={lastName}
-                              onChange= {e => setLastName(e.target.value)}
-                              required />
-                         </Form.Group>
-                         <Form.Group className="mb-2" controlId="formBasicEmail">
-                              <Form.Label>Email address</Form.Label>
-                              <Form.Control 
-                              type="email" 
-                              placeholder="name@example.com"
-                              value={email}
-                              onChange= {e => setEmail(e.target.value)}
-                              required />
-                              <Form.Text className="text-muted">
-                                   We'll never share your email with anyone else.
-                              </Form.Text>
-                         </Form.Group>
-                         <Form.Group>
-                              <Form.Label>Mobile Number</Form.Label>
-                              <Form.Control
-                              type="number"
-                              placeholder="0909-808-7070"
-                              value={mobileNumber}
-                              onChange= {e => setMobileNumber(e.target.value)}
-                              required />
-                         </Form.Group>
+          {password2 && password1 !== password2 && (
+            <p className="codelab-auth-validation" role="status">
+              Your passwords do not match yet.
+            </p>
+          )}
 
-                         <Form.Group controlId="formBasicPassword">
-                              <Form.Label>Password</Form.Label>
-                              <Form.Control 
-                              type="password"
-                              placeholder="Enter a minimum of 8 characters" 
-                              value={password1}
-                              onChange= {e => setPassword1(e.target.value)}
-                              required />
-                         </Form.Group>
-                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                              <Form.Label>Confirm Password</Form.Label>
-                              <Form.Control 
-                              type="password" 
-                              value={password2}
-                              onChange= {e => setPassword2(e.target.value)}
-                              required />
-                         </Form.Group>
-                         {
-                         isActive
-                         ?
-                         <Button onClick={registerUser} variant="outline-light" className="custom-bg4 align-self-center">Create Account</Button>
-                         :
-                         <Button variant="outline-light" className="custom-bg4 align-self-center disabled-btn">Create Account</Button>
-                         
-                         }
-                         
-                         <Form.Text className="text-muted align-self-center reg-txt">
-                                   Already have an account? &nbsp; <Link className="router-links" to="/account/login"><span className="reg-btn">Log in</span></Link>
-                              </Form.Text>
-                    </div>
-                    
-               </Form>
-          </Container>
-     )
+          <button
+            className="codelab-auth-submit"
+            type="submit"
+            disabled={!isActive || isSubmitting}
+          >
+            {isSubmitting ? 'Creating account…' : 'Create account'}
+            {!isSubmitting && <span aria-hidden="true">→</span>}
+          </button>
+        </form>
+
+        <p className="codelab-auth-switch">
+          Already have an account?{' '}
+          <Link to="/account/login">Log in</Link>
+        </p>
+      </section>
+    </main>
+  );
 }
-
-
 
 export default Register;

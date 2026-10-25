@@ -1,12 +1,17 @@
-import Banner from '../components/Banner.js'
+import Hero from '../components/Hero.jsx'
+import TrustedBrands from '../components/TrustedBrands.jsx'
+import LearningPath from '../components/LearningPath.jsx'
+import GetStartedBanner from '../components/GetStartedBanner.jsx'
 
 
 
 function Home(){
      return(
           <div>
-               <Banner />
-
+               <Hero />
+               <TrustedBrands />
+               <LearningPath />
+               <GetStartedBanner />
           </div>
      )
 }

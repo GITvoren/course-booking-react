@@ -1,10 +1,13 @@
 import AppNavbar from './components/AppNavbar.js'
+import Footer from './components/Footer.jsx';
 import CourseView from './components/CourseView.js'
 import Home from './pages/Home.js'
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Login from './pages/Login.js'
 import Courses from './pages/Courses.js'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 import Register from './pages/Register.js'
 import UnderConstruction from './utilities/UnderConstruction.js'
 import { UserProvider } from "./utilities/UserContext.js";
@@ -57,8 +60,8 @@ useEffect(()=>{
           <Route exact path="/" element= {<Home />}/>
           <Route path="/courses" element= {<Courses />}/>
           <Route path="/:courseId/details" element= {<CourseView />}/>
-          <Route path="/about" element= {<UnderConstruction />}/>
-          <Route path="/contact" element= {<UnderConstruction />}/>
+          <Route path="/about" element= {<About />}/>
+          <Route path="/contact" element= {<Contact />}/>
           <Route element={<NonMemberRoutes />}>
               <Route path="/account/login" element={<Login />} />
               <Route path="/account/register" element={<Register />} />
@@ -66,6 +69,7 @@ useEffect(()=>{
           <Route path="/logout" element= {<Logout />}/>
         </Routes>
       </UserProvider>
+      <Footer />
     </div>
   );
 }
