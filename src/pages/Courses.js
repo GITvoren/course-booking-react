@@ -54,51 +54,6 @@ function Courses() {
   return (
     <main className="courses-page">
       <Container className="courses-container">
-        <section className="courses-hero" aria-labelledby="courses-page-title">
-          <div className="courses-hero-content">
-            <span className="courses-eyebrow">
-              <span className="courses-eyebrow-dot" aria-hidden="true" />
-              YOUR NEXT CHAPTER STARTS HERE
-            </span>
-
-            <h1 id="courses-page-title">
-              Build skills.
-              <br />
-              <span>Build your future.</span>
-            </h1>
-
-            <p className="courses-hero-description">
-              Learn by doing with practical courses designed to help you grow
-              your coding skills and turn ideas into real projects.
-            </p>
-
-            <a className="courses-hero-link" href="#available-courses">
-              Explore courses <span aria-hidden="true">↓</span>
-            </a>
-
-            <div className="courses-hero-note">
-              <span className="courses-hero-note-line" aria-hidden="true" />
-              Learn at your pace. Create something real.
-            </div>
-          </div>
-
-          <div className="courses-hero-art" aria-hidden="true">
-            <div className="courses-art-orbit courses-art-orbit-one" />
-            <div className="courses-art-orbit courses-art-orbit-two" />
-            <div className="courses-art-code courses-art-code-top">
-              <span>01</span> &lt;learn /&gt;
-            </div>
-            <img
-              src={undraw2}
-              className="courses-hero-image"
-              alt=""
-            />
-            <div className="courses-art-code courses-art-code-bottom">
-              <span className="courses-code-dot" /> build_your_future()
-            </div>
-          </div>
-        </section>
-
         <section
           className="courses-catalog"
           id="available-courses"
